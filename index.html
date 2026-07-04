@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>#LOGIN-PAGE</title>
+    <style>
+      body{
+        background-color:black;
+        color:white;
+      }
+      p{
+        text-align:center;
+
+      }
+      h1{
+        text-align:center;
+      }
+      button{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+        border-radius:5px;
+      }
+      .main{
+        background-image:url("img.jpg");
+        border: 2px solid white;
+        width:200px;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      img{
+        border-radius:50%;
+        object-fit:cover;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:50px;
+        height:50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <h1>LOGIN</h1>
+
+      <img src="photo.jpg" >
+
+      <p>Username</p>
+      <p><input id="sam" type="password" 
+      placeholder="enter your valid username"></p>
+
+      <p>password</p>
+      <p><input id="anv" type="password"
+      placeholder="enter your valid password"></p>
+
+      <button onclick="sak()">ENTER</button>
+
+      <p id="number"></p>    
+    </div>
+  </body>
+</html>
+
+<script>
+  function sak() {
+
+    let a = document.getElementById("sam").value;
+    let b = Number(document.getElementById("anv").value);
+
+    if ( a == "Krishna" && b == 3009 ){
+      window.location.href="script.html" ;
+    }
+  
+    else{
+      document.getElementById("number").
+      innerHTML="hellow"
+    }
+
+  }
+
+</script>

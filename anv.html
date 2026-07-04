@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <style>
+      body{
+        background-color:black;
+      }
+
+      button{
+        font-size:10.5px;
+      }
+      
+      input{
+        height:10px;
+        width:162px;
+      }
+
+      textarea{
+        width:280px;
+        height:400px;
+      }
+    </style>
+  </head>  
+
+  <body>
+    <input id="ram" type="date">
+    <button onclick="sawan()" >ENTER</button>
+
+    <button onclick="mohan()">DELETE</button>
+    <textarea id="preet"></textarea>
+  </body>
+
+</html>
+
+<script>
+  
+  let note = document.getElementById("preet");
+  note.value = localStorage.getItem("mynote");
+
+  note.addEventListener("input",function() {
+    localStorage.setItem("mynote",note.value);
+  });
+
+  function mohan() {
+    localStorage.removeItem("mynote");
+    note.value="";
+  }
+
+  let java = document.getElementById("ram");
+  java.value = localStorage.getItem("anv");
+
+  function sawan() {
+    localStorage.setItem("anv",java.value);
+  }
+
+</script>

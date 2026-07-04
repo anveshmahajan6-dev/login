@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>VERIFICATION-2</title>
+    <style>
+      body{
+        background-color:black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      <input id="clone" type="password" minlength=6 maxlength=6;
+      placeholder="enter the code">
+
+      <button onclick="sof()">
+        ENTER
+      </button>
+
+      <p id="sak"></p>
+    </p>
+  </body>
+</html>
+
+<script>
+  function sof() {
+    let a = document.getElementById("clone").value ; 
+    
+    if (a=="A3009M"){
+      window.location.href="anv.html" ;
+    }
+
+    else{
+      document.getElementById("sak").
+      innerHTML="re-try" ;
+    }
+  }
+</script>
